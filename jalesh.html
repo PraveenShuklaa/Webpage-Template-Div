@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jalesh Cruise</title>
+    <link rel="stylesheet" href="icons/fontawesome-free-5.12.0-web/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: monsterat;
+            src: url(fonts/montserrat/Montserrat-Medium.ttf);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monsterat;
+        }
+        .clr{
+            clear: both;
+        }
+        .top{
+            display: block;
+            
+        }
+        .top a{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+        .top a i{
+            font-weight: 900;
+            background-color: #561d57;
+            color: #fff;
+            font-size: 50px;
+            padding: 0px 7px;
+        }
+        .top:hover{
+            background-color: #ff7f50;
+        }
+        .head-wrapper{
+            width: 100%;
+            height: 400px;
+            background-image: url(images/new-banner1.jpg);
+            background-position: center;
+            background-size: 100%;
+            position: relative;
+            /*background-repeat: no-repeat;*/
+            padding: 0% 7%;
+            
+        }
+        .logo{
+            float: left;
+            width: 15%;
+        }
+        .logo img{
+            height: 130px;
+            width: 130px;
+        }
+        .sub-head{
+            float: right;
+            width: 85%;
+            text-align: right;
+            font-size: 12px;
+        }
+        .sub-head ul a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .sub-head ul a li{
+            display: inline;
+            padding: 0px 2%;
+            line-height: 30px;
+        }
+        .sub-head ul a li i{
+            margin-right: 1%;
+        }
+        .head{
+            font-size: 13px;
+        }
+        .head ul a li{
+            line-height: 60px;
+            padding: 0px 2.5%;
+        }
+        .head ul a li span{
+            font-size: 10px;
+        }
+        .head ul a li.book{
+            background-color: #561d57;
+            padding: 8px 20px;
+        }
+        .head ul a li:hover{
+            text-decoration: underline;
+        }
+        .search-det{
+            padding: 0px 7%;
+            float: left;
+            width: 100%;
+            min-height: 100px;
+            box-shadow: 1px 1px 8px #999;
+            position: sticky;
+            background: #fff;
+            top: 0;
+        }
+        .con{
+            float: left;
+            width: 16%;
+            color: #1d415e;
+            padding: 2% 1% 0% 0%;
+
+        }
+        .con h3{
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .con span{
+            font-size: 20px;
+            font-weight: 900;
+        }
+        .con p{
+            font-size: 10px;
+            color: #999;
+        }
+        .opt{
+            width: 84%;
+            padding: 27px 0px;
+            float: left;
+        }
+        .box{
+            float: left;
+            border: 1px solid #e4e2e2;
+            width: 22.5%;
+            height: 46px;
+            line-height: 36px;
+            padding: 5px;
+            text-align: center;
+        }
+        .box span{
+            color: #999;
+            font-size: 13px;
+        }
+        .box select{
+            border: 0;
+        }
+        .search-box{
+            background-color: #561d57;
+            width: 10%;
+        }
+        .search-box h3{
+            font-weight: lighter;
+            color: #fff;
+        }
+        .banner-box{
+            padding: 30px 7% 0px 7%;
+        }
+        .banner-box h3{
+            text-align: center;
+            color: #666;
+            font-weight: 100;
+            font-size: 22px;
+        }
+        .template{
+            background-size: 100% 300px;
+            height: 300px;
+            padding: 60px 5%;
+            margin-top: 30px;
+            color: #fff;
+        }
+        .temp1{
+            background-image: url(images/jalesh1.jpg);
+        }
+        .temp2{
+            background-image: url(images/jalesh2.jpg);
+        }
+        .temp3{
+            background-image: url(images/jalesh3.jpg);
+            margin-bottom: 30px;
+            padding: 68px 5%;
+        }
+        .temp1-img-left{
+            float: left;
+            background: #152c571a;
+            width: 45%;
+        }
+        .temp1-img-left img{
+            height: 150px;
+        }
+        .temp1-img-left span{
+            font-size: 16px;
+            line-height: 40px;
+        }
+        .temp1-img-right{
+            float: right;
+            width: 36%;
+            padding: 10px 0px;
+            background: #81181c12;
+        }
+        .temp1-img-right img{
+            height: 75px;
+            width: 150px;
+            margin-left: 15%;
+        }
+        .temp1-img-right span.dome-head{
+            font-size: 18px;
+            margin-left: -15%;
+        }
+        .temp1-img-right p{
+            font-size: 15px;
+            text-align: justify;
+            margin-top: 10px;
+        }
+        .temp2-img-left{
+            float: left;
+            width: 48%;
+            background: #4b3a720f;
+        }
+        .temp2-img-left img{
+            width: 150px;
+            height: 75px;
+        }
+        .temp2-img-left span{
+            font-size: 18px;
+            margin-left: -10%;
+        }
+        .temp2-img-left p{
+            margin-top: 10px;
+            font-size: 15px;
+            text-align: justify;
+        }
+        .temp2-img-right{
+            float: right;
+            width: 40%;
+            background: #1f0c0812;
+        }
+        .temp2-img-right img{
+            width: 100%;
+        }
+        .img-gallary{
+            height: 450px;
+            box-shadow: 1px 1px 5px #999;
+            padding: 5px 0.5%;
+            background-color: #fff;
+            float: left;
+            width: 100%;
+        }
+        .image-gallery{
+            background-size: 100% 440px;
+            height: 440px;
+            width: 24.65%;
+        }
+        .gall1{
+            background-image: url(images/jal-img1.jpg);
+            float: left;
+        }
+        .gall2{
+            background-image: url(images/jal-img2.jpg);
+            float: left;
+            margin-left: 0.5%;
+        }
+        .gall3{
+            background-image: url(images/jal-img3.jpg);
+            float: left;
+            margin-left: 0.5%;
+        }
+        .gall4{
+            background-image: url(images/jal-img4.jpg);
+            float: right;
+        }
+        .gall-col{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding: 0px 6%;
+        }
+        .gall-col p {
+            position: absolute;
+            bottom: 40px;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            width: 88%;
+        }
+        .footer{
+            width: 100%;
+            background-repeat: no-repeat;
+            background-color: #000;
+            background-position: 56px 8px;
+            background-image: url(images/footer.png);
+            margin-top: -30px;
+            height: 400px;
+            margin-bottom: 25px;
+            padding: 60px 7% 0px;
+        }
+        .cont{
+            width: 31%;
+            color: #999;
+            float: left;
+        }
+        .cont h3{
+            font-weight: 100;
+            margin: 0px 0px 10px 0px;
+        }
+        .cont p{
+            font-size: 14px;
+            margin: 8px 0px;
+            line-height: 22px;
+        }
+        .cont a{
+            color: #999;
+            text-decoration: none;
+            line-height: 28px;
+        }
+        .cont a i{
+            margin-right: 10px;
+        }
+        .cont a span:hover{
+            color: #b43b1d;
+        }
+        .menu{
+            width: 23%;
+            float: left;
+            padding: 0px 1%;
+        }
+        .menu ul li{
+            line-height: 30px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .menu ul li a{
+            text-decoration: none;
+            color: #999;
+        }
+        .menu ul li a:hover{
+            color: #b43b1d;
+        }
+        .footer p.copy{
+            color: #999;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .follow {
+            padding: 0px;
+        }
+        .follow a i{
+            font-size: 55px;
+            color: #999;
+            width: 22%;
+        }
+        .icon{
+            margin-left: 14%;
+        }
+        .follow a img{
+            width: 98%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top"><a href="#top"><i class="fas fa-angle-up"></i></a></div>
+    <div class="head-wrapper" id="top">
+        <div class="logo">
+            <a href="jalesh.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+        <div class="sub-head">
+            <ul>
+                <a href="tel:1800 266 8927"><li> <i class="fas fa-flag"></i><i class="fas fa-phone-alt"></i> 1800 266 8927</li> |</a> 
+                <a href="https://webcheckin.jaleshcruises.com/"><li><i class="fas fa-calendar-check"></i> Checkin</li> |</a> 
+                <a href="javascript:void(0)"><li>Login</li> |</a>
+            </ul>
+        </div>
+        <div class="sub-head head">
+            <ul>
+                <a href="https://jaleshcruises.com/plan-your-holiday"><li>DESTINATIONS</li></a> 
+                <a href="https://jaleshcruises.com/accomodation"><li>ACCOMMODATION</li></a> 
+                <a href="javascript:void(0)"><li>THE SHIP <span>&#9660;</span></li></a>
+                <a href="https://jaleshcruises.com/agents-contact-us"><li>OUR OFFICES</li></a>
+                <a href="https://jaleshcruises.com/blog/"><li>BLOG</li></a>
+                <a href="https://jaleshcruises.com/get_cruise_list"><li class="book">BOOK NOW</li></a>
+            </ul>
+        </div>
+    </div>
+    <!----------------------head------------------------>
+    <div class="search-det">
+        <div class="con">
+            <h3>BOOK YOUR</h3>
+            <span>CRUISE NOW</span>
+            <p>Best Premium Cruises in India</p>
+        </div>
+        <div class="opt">
+            <div class="box">
+                <span>From </span><select><option> All Location</option>
+                    <option> Mumbai</option>
+                    <option> Dubai</option>
+                </select>
+            </div>
+            <div class="box">
+                <span>Departure </span><select><option> Any Dates</option></select>
+            </div>
+            <div class="box">
+                <span>Duration </span><select><option> Select Days</option>
+                    <option> 2-3 Days</option>
+                    <option> 3-4 Days</option>
+                    <option> 4-5 Days</option>
+                    <option> 5-6 Days</option>
+                </select>
+            </div>
+            <div class="box">
+                <span>Rooms </span><select><option> 1 Room</option></select>
+            </div>
+            <div class="box search-box">
+                <h3>Search</h3>
+            </div>
+        </div>
+    </div>
+    <div class="clr"></div>
+    <!-------------------------search-det------------------------------>
+    <div class="banner-box">
+        <h3>Our bold discoveries, step onboard and start exploring.</h3>
+        <div class="template temp1"></div>
+        <div class="template temp2">
+            <div class="temp1-img-left">
+                <img src="images/jalesh-img.png" alt="banner-image"><br>
+                <span>DANCE, RELAX & DISCOVER</span>
+            </div>
+            <div class="temp1-img-right">
+                <img src="images/jalesh-img2.png" alt="logo">
+                <span class="dome-head">THE DOME</span><br>
+                <p>If you are looking for a dash of music, a pinch of dance, a tweak of laughter and a squeeze of 
+                    vibrant nightlife, then The Dome is where you should be heading to.</p>
+            </div>
+        </div>
+        <div class="template temp3">
+            <div class="temp2-img-left">
+                <img src="images/jalesh-img3.png" alt="banner-image">
+                <span>THE BROADWAY EXPERIENCE</span>
+                <p>Get the privilege to experience a bigger dose of entertainment with exclusive shows specially 
+                    designed for the guests of Jalesh Cruise. With world-class ambience and international performers, 
+                    shows here are too good to be missed.</p>
+            </div>
+            <div class="temp2-img-right">
+                <img src="images/jalesh-img1.png" alt="banner-image">
+            </div>
+        </div>
+        <div class="img-gallary">
+            <div class="image-gallery gall1">
+                <div class="gall-col">
+                    <p>ACCOMMODATION</p>
+                </div>
+            </div>
+            <div class="image-gallery gall2">
+                <div class="gall-col">
+                    <p>SPA, SALON & FITNESS</p>  
+                </div>
+            </div>
+            <div class="image-gallery gall3">
+                <div class="gall-col">
+                    <p>PERSONALISED EVENTS</p>
+                </div>
+            </div>
+            <div class="image-gallery gall4">
+                <div class="gall-col">
+                    <p>DINING</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clr"></div>
+    <!----------------------------footer---------------->
+    <div class="footer">
+        <div class="cont">
+            <h3>CONTACT US</h3>
+            <p>Zen Cruises Pvt Ltd, Travel Agent for Jalesh Cruises</p>
+            <p>18th floor, A wing Marathon Futurex, N M Joshi Marg,<br> Lower Parel, Mumbai 400 013.</p>
+            <a href="mailto:info@jaleshcruises.com"><i class="fas fa-envelope"></i> <span> info@jaleshcruises.com</span></a><br>
+            <a href="tel:1800 266 8927"><i class="fas fa-flag"></i><i class="fas fa-phone-alt"></i> <span> 1800 266 8927</span></a> 
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="javascript:void(0)">HOME</a></li>
+                <li><a href="javascript:void(0)">DESTINATIONS</a></li>
+                <li><a href="javascript:void(0)">ACCOMMODATION</a></li>
+                <li><a href="javascript:void(0)">BOOK NOW</a></li>
+                <li><a href="javascript:void(0)">MEETINGS AND EVENTS</a></li>
+                <li><a href="javascript:void(0)">THE SHIP</a></li>
+                <li><a href="javascript:void(0)">ABOUT JALESH</a></li>
+                <li><a href="javascript:void(0)">ENVIRONMENT POLICY</a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="javascript:void(0)">GLOSSARY</a></li>
+                <li><a href="javascript:void(0)">TERMS AND CONDITIONS</a></li>
+                <li><a href="javascript:void(0)">VISA FORM</a></li>
+                <li><a href="javascript:void(0)">TRAVEL AGENT</a></li>
+                <li><a href="javascript:void(0)">REGISTRATION</a></li>
+                <li><a href="javascript:void(0)">BLOG</a></li>
+            </ul>
+        </div>
+        <div class="menu follow">
+            <a href="javascript:void(0)"><i class="fab fa-facebook"></i></a>
+            <a href="javascript:void(0)" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="javascript:void(0)" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="javascript:void(0)"><img src="images/google-play.png" alt="playstore"></a>
+        </div>
+        <div class="clr"></div>
+        <p class="copy">Copyright &copy; 2019 jaleshcruises. All rights reserved.</p>
+    </div>
+    <div class="clr"></div>
+</body>
+</html>
